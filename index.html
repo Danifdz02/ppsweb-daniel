@@ -4,25 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Portfolio" />
+
+    <!-- Política de Seguridad de Contenido -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://kit.fontawesome.com;
+        style-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline';
+        font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com data:;
+        img-src 'self' data:;
+        object-src 'none';
+        connect-src 'self';
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+      "
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--  Se mantiene crossorigin en fonts.gstatic, necesario para Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
+
+    <!--  Eliminado crossorigin="anonymous" inseguro -->
+    <script src="https://kit.fontawesome.com/fa62c117c7.js"></script>
+
     <link rel="stylesheet" href="styles.css" />
     <title>Raj Shekhar</title>
   </head>
+
   <body class="light" id="top">
     <header class="header center">
       <h3>
-        <a href="https://rjshkhr.github.io/cleanfolio-minimal" class="link"
-          >PPS Web</a
-        >
+        <a href="https://rjshkhr.github.io/cleanfolio-minimal" class="link">
+          PPS Web
+        </a>
       </h3>
 
       <nav class="nav center">
@@ -32,6 +52,9 @@
           </li>
           <li class="nav__list-item">
             <a class="link link--nav" href="#tools">Herramientas</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#team">Equipo</a>
           </li>
 	  <li class="nav__list-item">
 	    <a class="link link--nav" href="#team">Equipo</a>
@@ -61,9 +84,9 @@
         <h1><span class="about__name">Puesta en Producción Segura</span></h1>
         <h2 class="about__role">Módulo del <abbr title="Curso Especialista">CE</abbr> en Ciberseguridad en <abbr title="Tecnologías de la Información">IT</abbr><br> Curso 2025/26</h2>
         <p class="about__desc">
-          Web básica como práctica de uso de git y
-          gitflow, dentro de las buenas prácticas para el despliegue de software.
-          Curso impartido por el IES Aguadulce en 2025/26
+          Web básica como práctica de uso de git y gitflow, dentro de las buenas
+          prácticas para el despliegue de software. Curso impartido por el IES
+          Aguadulce en 2025/26.
         </p>
 
         <div class="about__contact center">
@@ -114,8 +137,7 @@
             </ul>
 
             <a
-              href="https://www.geeksforgeeks.org/software-
-testing/unit-testing-software-testing/"
+              href="https://www.geeksforgeeks.org/software-testing/unit-testing-software-testing/"
               aria-label="live preview"
               class="link link--icon"
             >
@@ -126,23 +148,19 @@ testing/unit-testing-software-testing/"
           <div class="project">
             <h3>OWASP-ASVS</h3>
             <p class="project__description">
-              El estandar ASVS (Application Security Verification Standard) proporciona un
-marco de requisitos y controles de seguridad para verificar que una aplicación cumple con
-buenas prácticas de desarrollo seguro antes de su puesta en producción. Su objetivo es
-asegurar que el software ha sido evaluado de forma sistemática en aspectos clave como
-autenticación, gestión de sesiones, control de acceso, cifrado, validación de datos o protección
-frente a vulnerabilidades comunes. Aplicarlo en el ciclo de desarrollo permite reducir riesgos,
-garantizar un nivel de seguridad consistente y ofrecer una base sólida para una puesta en
-producción segura y confiable.
+              El estándar ASVS (Application Security Verification Standard)
+              proporciona un marco de requisitos de seguridad para verificar que
+              una aplicación cumple con buenas prácticas antes de su puesta en
+              producción.
             </p>
             <ul class="project__stack">
-              <li class="project__stack-item">NIveles ASVS</li>
-              <li class="project__stack-item">Autentication</li>
-              <li class="project__stack-item">Gestión d sesiones</li>
+              <li class="project__stack-item">Niveles ASVS</li>
+              <li class="project__stack-item">Autenticación</li>
+              <li class="project__stack-item">Gestión de sesiones</li>
               <li class="project__stack-item">Control de acceso</li>
-              <li class="project__stack-item">Validar entrada</li>
-              <li class="project__stack-item">Cifrado/Criptografía</li>
-              <li class="project__stack-item">Api Security</li>
+              <li class="project__stack-item">Validación de datos</li>
+              <li class="project__stack-item">Cifrado</li>
+              <li class="project__stack-item">API Security</li>
             </ul>
 
             
@@ -170,7 +188,7 @@ los riesgos se minimizan y la aplicación se mantiene estable y confiable para l
               <li class="project__stack-item">Docker</li>
               <li class="project__stack-item">Kubernetes</li>
               <li class="project__stack-item">Jenkins</li>
-              <li class="project__stack-item">GithUb actions</li>
+              <li class="project__stack-item">GitHub Actions</li>
               <li class="project__stack-item">GitLab</li>
               <li class="project__stack-item">Azure DevOps</li>
             </ul>
@@ -290,7 +308,32 @@ los riesgos se minimizan y la aplicación se mantiene estable y confiable para l
   </ul>
 </section>
 
-      <!-- Contact -->
+      <!-- Equipo -->
+      <section id="team" class="team-section">
+        <h2>Equipo</h2>
+        <div class="team-container">
+          <div class="team-card"><h3>Dani</h3></div>
+          <div class="team-card"><h3>Balbino</h3></div>
+          <div class="team-card"><h3>Dario</h3></div>
+          <div class="team-card"><h3>Carlos</h3></div>
+          <div class="team-card"><h3>Juan Vicente</h3></div>
+          <div class="team-card"><h3>Alejandro</h3></div>
+          <div class="team-card"><h3>Jose Alejandro</h3></div>
+          <div class="team-card"><h3>Marian</h3></div>
+          <div class="team-card"><h3>Maria Isabel</h3></div>
+          <div class="team-card"><h3>Juan Gabriel</h3></div>
+          <div class="team-card"><h3>Sergio</h3></div>
+          <div class="team-card"><h3>Aimad</h3></div>
+          <div class="team-card"><h3>David</h3></div>
+          <div class="team-card"><h3>Samuel</h3></div>
+          <div class="team-card"><h3>Luis Alberto</h3></div>
+          <div class="team-card"><h3>Nicolas</h3></div>
+          <div class="team-card"><h3>Juan Miguel</h3></div>
+          <div class="team-card"><h3>Dalian</h3></div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
       <section class="section contact center" id="contact">
         <h2 class="section__title">Contacto</h2>
         <a href="mailto:raul.ortega@iesaguadulce.es">
@@ -300,6 +343,13 @@ los riesgos se minimizan y la aplicación se mantiene estable y confiable para l
     </main>
 
     <footer class="footer">
+      <a
+        href="https://github.com/raulortegar/pps-web"
+        class="link footer__link"
+        target="_blank"
+      >
+        Creado por Alumnado-PPS
+      </a>
  		 <a
    	 href="https://github.com/raulortegar/pps-web"
    	 class="link footer__link"
@@ -321,3 +371,4 @@ los riesgos se minimizan y la aplicación se mantiene estable y confiable para l
     <script src="./script.js"></script>
   </body>
 </html>
+
